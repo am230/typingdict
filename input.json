@@ -1,0 +1,48 @@
+{
+    "name": "John Doe",
+    "age": 30,
+    "isStudent": false,
+    "favoriteFruits": [
+        "apple",
+        "banana",
+        "orange"
+    ],
+    "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zipCode": "10001"
+    },
+    "friends": [
+        {
+            "name": "Jane Smith",
+            "age": 28,
+            "isStudent": true,
+            "favoriteFruits": [
+                "strawberry",
+                "blueberry"
+            ],
+            "address": {
+                "street": "456 Elm St",
+                "city": "Los Angeles",
+                "state": "CA",
+                "zipCode": "90001"
+            }
+        },
+        {
+            "name": "Bob Johnson",
+            "age": 32,
+            "isStudent": false,
+            "favoriteFruits": [
+                "grape",
+                "kiwi"
+            ],
+            "address": {
+                "street": "789 Oak St",
+                "city": "Chicago",
+                "state": "IL",
+                "zipCode": "60601"
+            }
+        }
+    ]
+}
