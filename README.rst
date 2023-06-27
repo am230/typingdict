@@ -8,7 +8,7 @@ Generate TypedDict Automatically
 .. image:: https://badge.fury.io/py/typingdict.svg
     :target: https://badge.fury.io/py/typingdict
 
-.. image:: url
+.. image:: https://raw.githubusercontent.com/am230/typingdict/master/images/screenshot.png
 
 Usage
 -----

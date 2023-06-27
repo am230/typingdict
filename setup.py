@@ -11,7 +11,7 @@ setup(
     name=name,
     version="0.0.1",
     keywords=["Automation", "Typing"],
-    description="React like string builder",
+    description="Generate TypedDict Automatically",
     long_description=long_description,
     license="MIT Licence",
     long_description_content_type='text/x-rst',
