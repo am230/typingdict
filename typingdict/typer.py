@@ -39,7 +39,17 @@ class Typer:
 
     def _typerify(self, key: str, v: Any) -> str:
         # key = self.format_name(key)
-        if isinstance(v, dict):
+        if isinstance(v, str):
+            return 'str'
+        elif isinstance(v, bool):
+            return 'bool'
+        elif isinstance(v, int):
+            return 'int'
+        elif isinstance(v, float):
+            return 'float'
+        elif v == None:
+            return 'None'
+        elif isinstance(v, dict):
             if not v.values():
                 return 'Dict'
             attrs = {k: self._typerify(k, v) for k, v in v.items()}
@@ -70,16 +80,6 @@ class Typer:
                     parts.append(']')
                 return strinpy.build(['List[', parts, ']'])
             return 'List'
-        elif isinstance(v, str):
-            return 'str'
-        elif isinstance(v, int):
-            return 'int'
-        elif isinstance(v, float):
-            return 'float'
-        elif isinstance(v, bool):
-            return 'bool'
-        elif v == None:
-            return 'None'
         else:
             return str(v)
 

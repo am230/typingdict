@@ -9,14 +9,14 @@ py_modules = [name]
 
 setup(
     name=name,
-    version="0.0.1",
+    version="0.0.2",
     keywords=["Automation", "Typing"],
     description="Generate TypedDict Automatically",
     long_description=long_description,
     license="MIT Licence",
     long_description_content_type='text/x-rst',
     packages=find_packages(),
-    requires=['strinpy'],
+    requires=['strinpy', 'astor'],
     url=f"https://github.com/{author}/{name}",
     author=author,
     py_modules=py_modules,
