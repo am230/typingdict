@@ -5,9 +5,12 @@ import re
 
 
 class Typer:
+    keywords = ['List', 'Dict', 'Union', 'TypedDict', 'Optional']
+    keywords.extend(keyword.kwlist)
+
     def __init__(self) -> None:
         self.parts: list[Any] = ['from typing import List, Dict, Union, TypedDict, Optional\n\n']
-        self.names: set[str] = set()
+        self.names: set[str] = set(self.keywords)
         self.dicts: dict[str, str] = {}
 
     def format_name(self, name: str) -> str:
@@ -25,7 +28,7 @@ class Typer:
         return name
 
     def is_invalid_name(self, name: str) -> bool:
-        if keyword.iskeyword(name):
+        if keyword.iskeyword(name) or name in self.keywords:
             return True
         return not re.match(r'^[\w_][\w_\d]*$', name)
 
