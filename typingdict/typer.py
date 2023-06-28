@@ -60,11 +60,12 @@ class Typer:
             if exist:
                 return name
             if any(self.is_invalid_name(k) for k in v.keys()):
-                self.parts.append(strinpy.build([name, ' = TypedDict("', key, '", {', ', '.join(f'"{k}": "{v}"' for k, v in attrs.items()), '})']))
+                self.parts.append(strinpy.build([name, ' = TypedDict("', key, '", {', ', '.join(f'"{k}": "{v}"' for k, v in attrs.items()), '})', '\n']))
                 return name
             self.parts.append([
                 f'class {name}(TypedDict):\n',
                 [[f'    {k}:"{v}"\n'] for k, v in attrs.items()],
+                '\n'
             ])
             return name
         elif isinstance(v, list):

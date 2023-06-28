@@ -9,7 +9,7 @@ py_modules = [name]
 
 setup(
     name=name,
-    version='0.0.3',
+    version='0.0.4',
     keywords=["Automation", "Typing"],
     description="Generate TypedDict Automatically",
     long_description=long_description,
