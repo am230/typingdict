@@ -1,7 +1,5 @@
 from setuptools import find_packages, setup
 
-from typingdict.__version__ import __version__
-
 with open("README.rst", mode="r", encoding="utf-8") as f:
     long_description = f.read()
 
@@ -10,11 +8,12 @@ with open("requirements.txt", mode="r", encoding="utf-8") as f:
 
 author = "am230"
 name = "typingdict"
+version = "0.1.1"
 py_modules = [name]
 
 setup(
     name=name,
-    version=__version__,
+    version=version,
     keywords=["Automation", "Typing"],
     description="Generate TypedDict Automatically",
     long_description=long_description,
