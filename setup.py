@@ -8,7 +8,7 @@ with open("requirements.txt", mode="r", encoding="utf-8") as f:
 
 author = "am230"
 name = "typingdict"
-version = "0.1.1"
+version = "0.1.2"
 py_modules = [name]
 
 setup(
