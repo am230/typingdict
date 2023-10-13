@@ -1,0 +1,12 @@
+{
+    "nested_dict": {
+        "number": 1,
+        "string": "value",
+        "maybe": "foo"
+    },
+    "same_nested_dict": {
+        "number": 2,
+        "string": "different value",
+        "maybe": null
+    }
+}
