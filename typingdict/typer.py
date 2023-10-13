@@ -20,6 +20,10 @@ class Typer:
     def format_name(self, name: str) -> str:
         # convert snakecase to camelcase
         parts = name.split("_")
+        if len(parts) == 0:
+            parts = ["_"]
+        if self.is_invalid_name(parts[0]):
+            parts[0] = f"_{parts[0]}"
         name = "".join([part.capitalize() for part in parts])
         if name not in self.names:
             self.names.add(name)
@@ -34,7 +38,7 @@ class Typer:
     def is_invalid_name(self, name: str) -> bool:
         if keyword.iskeyword(name) or name in self.keywords:
             return True
-        return not re.match(r"^[\w_][\w_\d]*$", name)
+        return re.match(r"^[a-zA-Z_][\w_\d]*$", name) is None
 
     def is_exists(self, name, attrs: dict) -> tuple[bool, str]:
         key = str(attrs)

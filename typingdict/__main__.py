@@ -14,11 +14,15 @@ import click
 @click.command()
 @click.argument(
     "input",
-    type=click.File("r"),
+    type=click.File("rb"),
     required=True,
 )
 @click.option(
-    "--output", "-o", type=click.File("w"), default=None, help="Output file path"
+    "--output",
+    "-o",
+    type=click.File("w", encoding="utf-8"),
+    default=None,
+    help="Output file path",
 )
 def main(input: TextIOWrapper, output: TextIOWrapper):
     from . import typerify
