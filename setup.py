@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-import typingdict
+from typingdict.__version__ import __version__
 
 with open("README.rst", mode="r", encoding="utf-8") as f:
     long_description = f.read()
@@ -14,7 +14,7 @@ py_modules = [name]
 
 setup(
     name=name,
-    version=typingdict.__version__,
+    version=__version__,
     keywords=["Automation", "Typing"],
     description="Generate TypedDict Automatically",
     long_description=long_description,
